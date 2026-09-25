@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portal de alumnos | Escuela Lázaro Cárdenas</title>
+
+    <link rel="stylesheet" href="alumnos.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         MENÚ SUPERIOR
+    ========================== -->
+
+    <header class="header">
+
+        <nav class="menu container">
+
+            <a href="index.html" class="logo">
+                Escuela Lázaro Cárdenas
+            </a>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Inicio
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html#oferta">
+                        Oferta educativa
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html#contacto">
+                        Contacto
+                    </a>
+                </li>
+
+                <li>
+                    <a href="alumnos.html" class="activo">
+                        Alumnos
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         PORTAL DE ALUMNOS
+    ========================== -->
+
+    <main class="consulta">
+
+        <section class="consulta-contenido">
+
+            <!-- LOGO Y TÍTULO -->
+
+            <div class="encabezado-consulta">
+
+                <img
+                    src="imagenes/logoreducido.png"
+                    alt="Logo de la Escuela Primaria Lázaro Cárdenas"
+                    class="logo-escuela"
+                >
+
+                <p class="subtitulo">
+                    Portal de alumnos
+                </p>
+
+                <h1>
+                    Consulta de boleta
+                </h1>
+
+                <p class="descripcion">
+                    Ingresa los datos solicitados para consultar
+                    la información académica del alumno.
+                </p>
+
+            </div>
+
+
+            <!-- =========================
+                 FORMULARIO
+            ========================== -->
+
+            <form
+                class="formulario"
+                id="formulario-boleta"
+            >
+
+                <!-- NOMBRE -->
+
+                <div class="campo">
+
+                    <label for="nombre">
+                        Nombre completo del alumno
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Escribe el nombre completo"
+                        autocomplete="off"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- CURP -->
+
+                <div class="campo">
+
+                    <label for="curp">
+                        CURP del alumno
+                    </label>
+
+                    <input
+                        type="text"
+                        id="curp"
+                        name="curp"
+                        placeholder="Ingresa los 18 caracteres de la CURP"
+                        minlength="18"
+                        maxlength="18"
+                        autocomplete="off"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- BOTÓN -->
+
+                <button
+                    type="submit"
+                    class="btn-consultar"
+                >
+                    Consultar boleta
+                </button>
+
+            </form>
+
+
+            <!-- =========================
+                 AVISO
+            ========================== -->
+
+            <div class="aviso">
+
+                <p>
+                    Este apartado se encuentra en desarrollo.
+                    Actualmente no almacena ni consulta información
+                    personal de los alumnos.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         PIE DE PÁGINA
+    ========================== -->
+
+    <footer class="footer">
+
+        <div class="container footer-contenido">
+
+            <p>
+                Escuela Primaria Lázaro Cárdenas
+            </p>
+
+            <a href="index.html">
+                Volver al inicio
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         FUNCIONAMIENTO PROVISIONAL
+    ========================== -->
+
+    <script>
+
+        const formulario =
+            document.getElementById("formulario-boleta");
+
+        formulario.addEventListener(
+            "submit",
+            function(event) {
+
+                event.preventDefault();
+
+                alert(
+                    "La consulta de boletas estará disponible próximamente."
+                );
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>
